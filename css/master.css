@@ -1,0 +1,82 @@
+body{
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+.__nave{
+  border-radius: 20px 20px 0px 0px;
+  background-color: rgb(0, 109, 223);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.__busqueda{
+  justify-content: center;
+  background-color: rgb(0, 109, 223);
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.__buscar{
+  justify-content: center;
+}
+.__ofertasdeldia{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
+.__ofertas{
+  justify-content: space-around;
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 1300px;
+}
+.__itemoferta{
+  border-radius: 10px 10px 10px 10px;
+  margin: 10px;
+  padding-top: 20px;
+}
+.__imgofertas{
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+.__comprar{
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.__textoofertas{
+  text-align: center;
+}
+.__todos{
+  justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.piedepag{
+  width: 1300px;
+  max-height: 1000px;
+  margin: 50px auto;
+  background-color: rgb(0, 109, 223);
+  border-radius: 0px 0px 20px 20px;
+  justify-content: space-around;
+}
+.__artpie{
+  margin: 15px auto;
+  text-align: center;
+}
+.__artpie h4{
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.__artpie p{
+  color: rgb(0, 5, 66);
+  line-height: 7px;
+}
+.__artpie a{
+  text-decoration: none;
+  color: rgb(0, 5, 66);
+  line-height: 10px;
+}
