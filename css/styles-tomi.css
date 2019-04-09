@@ -48,7 +48,7 @@ a{
   font-weight: 300;
 }
 .already_user a{
-  color: rgb(49, 219, 158);
+  color: rgb(247, 42, 27);
   font-weight: 500;
 }
 .already_user a:hover{
@@ -100,26 +100,26 @@ a{
 .input_change:valid ~ label{
   top: -12px;
   left: 0;
-  color: rgb(49, 219, 158);
+  color: rgb(247, 42, 27);
   font-size: 12px;
   font-weight: bold;
 }
 .input_change:focus,
 .input_change:valid{
-  border-bottom: 1px solid rgb(49, 219, 158);
+  border-bottom: 1px solid rgb(247, 42, 27);
 }
 .submit_button{
   border-bottom: none;
-  border: 1px solid rgb(49, 219, 158);
+  border: 1px solid rgb(247, 42, 27);
   cursor: pointer;
   padding: 6px;
   border-radius: 30px;
-  color: rgb(49, 219, 158);
+  color: rgb(247, 42, 27);
   font-weight: 500;
   width: 320px;
 }
 .submit_button:hover{
-  background-color: rgb(49, 219, 158);
+  background-color: rgb(247, 42, 27);
   color: #fff;
   transition: .3s;
 }
@@ -281,14 +281,14 @@ a{
   border: none;
   cursor: pointer;
   padding: 6px;
-  background-color: rgb(49, 219, 158);
+  background-color: rgb(247, 42, 27);
   border-radius: 30px;
   color: #fff;
   font-weight: 500;
   width: 320px;
 }
 .submit_button_login:hover{
-  background-color: rgba(49, 219, 158, 0.8);
+  background-color: rgba(247, 42, 27, 0.8);
   transition: .3s;
 }
 .o-xs-login{
