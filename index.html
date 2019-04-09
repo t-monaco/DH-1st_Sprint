@@ -10,22 +10,23 @@
   <body>
     <div class="container-fluid">
       <header>
-        <nav class="d-flex navbar navbar-expand-lg navbar-dark __nave">
+        <nav class="d-flex navbar navbar-expand-lg navbar-light __nave">
           <div class="d-flex flex-grow-1">
               <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-              <a class="navbar-brand" href="#">
-                  E-Commerce
-              </a>
+              <div class="navbar-brand" href="#">
+                  <img class="__imglogo" src="img/logo_techhub.png" alt="logo">
+              </div>
               <div class="w-100 text-right">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
                       <span class="navbar-toggler-icon"></span>
                   </button>
               </div>
           </div>
+
           <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-              <ul class="navbar-nav ml-auto flex-nowrap">
+              <ul class="navbar-nav ml-auto flex-nowrap __navbar">
                   <li class="nav-item">
-                      <a href="#" class="nav-link">FAQ</a>
+                      <a href="faq.html" class="nav-link">FAQ</a>
                   </li>
                   <li class="nav-item">
                       <a href="login.html" class="nav-link">Ingresar</a>
@@ -34,15 +35,17 @@
                       <a href="register.html" class="nav-link">Registrarme</a>
                   </li>
               </ul>
+
           </div>
         </nav>
+        <div class="d-flex __busqueda">
+        <form class="d-flex form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Busca tu producto" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0 __buscar" type="submit">Buscar</button>
+        </form>
+        </div>
 
-        <nav class="navbar navbar-dark d-flex __busqueda">
-          <form class="d-flex form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Busca tu producto" aria-label="Search">
-            <button class="btn btn-light my-2 my-sm-0 __buscar" type="submit">Buscar</button>
-          </form>
-        </nav>
+
 
         <a href="#" class="d-flex btn btn-primary __todos" >Ver Catalogo Completo</a>
 
@@ -96,7 +99,7 @@
         </div>
     </header>
 
-      <div class="container-fluid d-flex">
+      <div class="d-flex">
         <footer class="piedepag row">
           <article class="sucursales col-12 col-md-4 __artpie">
             <h4>Sucursales</h4>
@@ -117,9 +120,11 @@
           </article>
           <article class="sucursales col-12 col-md-4 __artpie">
             <h4>Mi cuenta</h4>
-            <a href="#">Ingresar</a>
+            <a href="login.html">Ingresar</a>
             <br>
-            <a href="#">Registracion</a>
+            <a href="register.html">Registracion</a>
+            <br>
+            <a href="faq.html">FAQ</a>
             <br>
             <a href="#">Mi Carrito</a>
 

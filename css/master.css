@@ -2,17 +2,28 @@ body{
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
 }
+.container-fluid{
+  padding: 0;
+}
 .__nave{
   border-radius: 20px 20px 0px 0px;
-  background-color: rgb(0, 109, 223);
-  max-width: 1300px;
-  margin: 0 auto;
+  background-color: rgb(150, 150, 150);
+  max-width: 100vw;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.__navbar{
+  justify-content: flex-end;
+}
+.__imglogo{
+  width: 100px;
 }
 .__busqueda{
-  justify-content: center;
-  background-color: rgb(0, 109, 223);
-  max-width: 1300px;
+  justify-content: flex-end;
+  /* background-color: rgb(0, 109, 223); */
+  max-width: 100vw;
   margin: 0 auto;
+  padding-bottom: 20px;
   margin-bottom: 20px;
 }
 .__buscar{
@@ -27,7 +38,7 @@ body{
   justify-content: space-around;
   margin: 20px auto;
   padding: 30px;
-  max-width: 1300px;
+  max-width: 100vw;
 }
 .__itemoferta{
   border-radius: 10px 10px 10px 10px;
@@ -41,7 +52,9 @@ body{
 }
 .__comprar{
   justify-content: center;
+  background-color: rgb(150, 150, 150);
   width: 70%;
+  border: none;
   margin: 0 auto;
   font-weight: bold;
 }
@@ -49,16 +62,19 @@ body{
   text-align: center;
 }
 .__todos{
+  border-radius: 20px;
   justify-content: center;
+  background-color: rgb(150, 150, 150);
+  border: none;
   width: 30%;
   margin: 0 auto;
   font-weight: bold;
 }
 .piedepag{
-  width: 1300px;
+  width: 100vw;
   max-height: 1000px;
-  margin: 50px auto;
-  background-color: rgb(0, 109, 223);
+  margin: 0 auto;
+  background-color: rgb(150, 150, 150);
   border-radius: 0px 0px 20px 20px;
   justify-content: space-around;
 }
