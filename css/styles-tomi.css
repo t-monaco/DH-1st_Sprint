@@ -23,9 +23,10 @@ a{
   top: 0;
   left: 0;
   padding: 22px;
+  padding-top: 0px;
 }
 .img_logo{
-  height: 70px;
+  height: 85px;
 }
 .container_signup{
   width: 100%;
@@ -128,6 +129,23 @@ a{
   margin-left: 52px;
   margin-top: 60px;
   margin-bottom: 16px;
+}
+.o-xs-register{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  color: rgb(167, 167, 167);
+  width: 300px;
+}
+.separador_horizontal{
+  border-top: 1px solid rgb(167, 167, 167);
+  flex-grow: 1;
+  height: 1px;
+}
+.texto-separador{
+  margin: 0 20px;
 }
 .signup_social{
   margin: 0;
@@ -272,6 +290,23 @@ a{
 .submit_button_login:hover{
   background-color: rgba(49, 219, 158, 0.8);
   transition: .3s;
+}
+.o-xs-login{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  color: rgb(167, 167, 167);
+  width: 300px;
+}
+.separador_horizontal{
+  border-top: 1px solid rgb(167, 167, 167);
+  flex-grow: 1;
+  height: 1px;
+}
+.texto-separador{
+  margin: 0 20px;
 }
 
 
