@@ -76,6 +76,14 @@ a{
   width: 84%;
   justify-content: center;
 }
+.nombre-apellido{
+	width: 320px;
+	display: flex;
+	justify-content: space-between;
+}
+.name .input_change, .apellido .input_change{
+	width: 144px;
+}
 .input_change{
   width: 320px;;
   margin-bottom: 30px;
