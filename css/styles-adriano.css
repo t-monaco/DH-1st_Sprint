@@ -1,31 +1,104 @@
 body{
-  font-family: 'Raleway', sans-serif;
+     font-family: 'Raleway', sans-serif;
 }
 a{
-  text-decoration: none;
-  color: #000000;
+     text-decoration: none;
+     color: #000000;
 }
 .p-r{
-  background-color: rgb(233, 230, 230);
-  border-radius: 10px;
-  padding: 5px;
+     background-color: rgb(233, 230, 230);
+     border-radius: 10px;
 }
-.otrasPreguntas textarea{
-  border-radius: 8px;
-  width: 50%;
-  height: 100px;
+.__pregunta
+{
+     font-size: 20px;
+     background-color: rgb(147, 218, 177);
+     padding: 4px 10px;
+     border-radius: 10px 10px 0px 0px;
 }
-.otrasPreguntas textarea:focus{
-  border: 2px solid rgb(247, 42, 27);
-  box-shadow: 0;
+.__respuesta
+{
+     transition: all 0.3s;
+     padding: 0px 10px 10px 10px;
+     margin-top: -10px;
 }
-.otrasPreguntas button{
-  border-radius: 8px;
-  background-color: rgb(247, 42, 27);
-  border: none;
-  padding: 6px 14px;
+/* .__pregunta:hover
+{
+     border-radius: 10px 10px 0px 0px;
 }
-.otrasPreguntas button:hover{
-  background-color: rgba(247, 42, 27, 0.8);
+.__pregunta:hover ~ .__respuesta
+{
+     display: block;
+} */
+.__form_otrasPreguntas
+{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+}
+.__form_otrasPreguntas label
+{
+     font-size: 20px;
+}
+.__form_otrasPreguntas textarea
+{
+     border-radius: 8px;
+     width: 60%;
+     height: 100px;
+     margin-top: -16px;
+}
+.__form_otrasPreguntas textarea:focus
+{
+     border: 2px solid rgb(247, 42, 27);
+     box-shadow: 0;
+}
+.__form_otrasPreguntas button
+{
+     border-radius: 8px;
+     background-color: rgb(247, 42, 27);
+     border: none;
+     padding: 6px 14px;
+     width: 76px;
+     margin-top: 10px;
+}
+.__form_otrasPreguntas button:hover
+{
+     background-color: rgba(247, 42, 27, 0.8);
+
+}
+
+@media (min-width: 400px) 
+{
+   
+}
+
+@media (min-width: 768px) 
+{
+    
+}
+
+@media (min-width: 992px) 
+{
+     .__pregunta
+     {
+          font-size: 20px;
+          background-color: rgb(147, 218, 177);
+          padding: 4px 10px;
+          border-radius: 10px;
+     }
+     .__respuesta
+     {
+          display: none;
+          transition: all 0.3s;
+          padding: 0px 10px 10px 10px;
+     }
+     .__pregunta:hover
+     {
+          border-radius: 10px 10px 0px 0px;
+     }
+     .__pregunta:hover ~ .__respuesta
+     {
+          display: block;
+     }
 
 }
