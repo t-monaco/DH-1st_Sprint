@@ -1,0 +1,23 @@
+*
+{
+     margin: 40px auto;
+     padding: 0;
+     box-sizing: border-box;
+}
+.__perfil
+{
+     font-family: 'Raleway', sans-serif;
+}
+.__main_container
+{
+     display: flex;
+}
+.__profile_photo img
+{
+     width: 170px;
+}
+.__unVisibleInput
+{
+     width: 0.1px;
+     border: none;
+}
