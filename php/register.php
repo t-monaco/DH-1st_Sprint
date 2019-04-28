@@ -16,7 +16,7 @@
                     if(count($errores)==0){
                          $registro = armarRegistro($_POST);
                          guardarUsuario($registro);
-                         redirect("index.php");
+                         rediret("index.php");
                          exit;
                     }
                }
@@ -38,7 +38,7 @@
 </head>
 <body>
   <header class="container_header">
-    <img class="img_logo" src="img/logo_techhub_5.png" alt="logo">
+  <a href="index.php"><img class="img_logo" src="img/logo_techhub_5.png" alt="logo"></a>
   </header>
   <main>
     <div class="container_signup">
@@ -47,7 +47,7 @@
             Regístrate
           </div>
           <div class="already_user">
-            ¿Ya tienes una cuenta Amazon?
+            ¿Ya tienes una cuenta techHub?
             <a href="login.php">Iniciar Sesión</a>
           </div>
         </div>

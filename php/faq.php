@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,10 +8,66 @@
     <link href=“https://fonts.googleapis.com/css?family=Raleway:300,400,500,700” rel=“stylesheet”>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles-adriano.css">
+    <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
     <div class="container">
+    <?php if (isset($_SESSION["email"])) { ?>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.php"><img class="__imglogo" src="img/logo_techhub_5.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto o_navitems">                
+                <li class="nav-item o_navlinks">
+                  <a class="nav-link" href="perfil.php"><?php echo "<i class='far fa-user'></i> ".$_SESSION["name"];?></a>
+                </li>
+                <li class="nav-item o_navlinks">
+                  <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
+                </li>
+                <li class="nav-item o_navlinks">
+                  <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
+                </li>
+                      
+              </ul>
+              <form class="form-inline my-2 my-lg-0 justify-content-end">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+
+        <?php } else { ?>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.php"><img class="__imglogo" src="img/logo_techhub_5.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto o_navitems">                
+                <li class="nav-item o_navlinks">
+                  <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+                </li>
+                <li class="nav-item o_navlinks">
+                  <a class="nav-link" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
+                </li>
+                <li class="nav-item o_navlinks">
+                  <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
+                </li>
+                      
+              </ul>
+              <form class="form-inline my-2 my-lg-0 justify-content-end">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+        <?php } ?>
         <section class="row  text-left ">
           <article class="col-12  " >
               <legend>

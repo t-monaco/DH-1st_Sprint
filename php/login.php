@@ -21,7 +21,7 @@
                {
                     $usuario = buscarEmail($_POST["email"]);
                     crearSesion($usuario, $_POST);
-                    redirect("index.php");
+                    rediret("index.php");
                     exit;
                }
 		}
@@ -45,7 +45,7 @@
 <body>
      
      <header class="container_header">
-          <img class="img_logo" src="img/logo_techhub_5.png" alt="logo">
+          <a href="index.php"><img class="img_logo" src="img/logo_techhub_5.png" alt="logo"></a>
      </header>
      <main>
           <div class="container_login">
@@ -54,7 +54,7 @@
                          Iniciar Sesión
                     </div>
                     <div class="already_user">
-                         ¿Nuevo en Amazon?
+                         ¿Nuevo en techHub?
                     <a href="register.php">Regístrate</a>
                     </div>
                </div>
