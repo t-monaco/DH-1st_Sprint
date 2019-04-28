@@ -1,7 +1,12 @@
 <?php
 	include_once("controllers/functions.php");
      
-     if ($_POST){
+     if(isset($_SESSION['email']))
+     {
+          rediret('index.php');
+     }
+     else if ($_POST)
+     {
           $errores=validar($_POST);
                if(count($errores)==0){
                     $usuario = buscarEmail($_POST["email"]);
