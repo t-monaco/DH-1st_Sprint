@@ -11,11 +11,7 @@
                     if(count($errores)==0){
                          $registro = armarRegistro($_POST);
                          guardarUsuario($registro);
-<<<<<<< HEAD
                          redirect("index.php");
-=======
-                         header("location:navbar.php");
->>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
                          exit;
                     }
                }

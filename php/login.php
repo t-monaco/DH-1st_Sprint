@@ -16,12 +16,8 @@
                {
                     $usuario = buscarEmail($_POST["email"]);
                     crearSesion($usuario, $_POST);
-<<<<<<< HEAD
                     redirect("index.php");
                     exit;
-=======
-                    header("location: navbar.php");
->>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
                }
 		}
 	}
