@@ -1,18 +1,46 @@
-body{
-     font-family: 'Raleway', sans-serif;
+*
+{
+     padding: 0;
+     margin: 0 auto;
+     box-sizing: border-box;
 }
-a{
+body
+{
+     font-family: 'Raleway', sans-serif;
+     overflow-x: hidden;
+     background-color: rgb(255, 255, 255);
+}
+a
+{
      text-decoration: none;
      color: #000000;
 }
-.p-r{
-     background-color: rgb(233, 230, 230);
+.__nav
+{
+     width: 100%;
+     margin-right: 0px;
+     overflow: hidden;
+     /* position: fixed; */
+}
+.__QUS_container
+{
+     /* margin-top: 40px;
+     padding-left: 60px;
+     padding-right: 60px;
+     padding-bottom: 40px;  */
+     /* margin-top: 80px; */
+     padding: 40px 60px;
+}
+.p-r
+{
+     background-color: rgb(206, 206, 206);
      border-radius: 10px;
 }
 .__pregunta
+
 {
      font-size: 20px;
-     background-color: rgb(147, 218, 177);
+     background-color: rgb(52, 180, 131);
      padding: 4px 10px;
      border-radius: 10px 10px 0px 0px;
 }
@@ -22,14 +50,10 @@ a{
      padding: 0px 10px 10px 10px;
      margin-top: -10px;
 }
-/* .__pregunta:hover
+.__respuesta ul , .__respuesta ol
 {
-     border-radius: 10px 10px 0px 0px;
+     padding-left: 40px;
 }
-.__pregunta:hover ~ .__respuesta
-{
-     display: block;
-} */
 .__form_otrasPreguntas
 {
      display: flex;
@@ -39,31 +63,35 @@ a{
 .__form_otrasPreguntas label
 {
      font-size: 20px;
+     margin: 0 10px 0 0;
 }
 .__form_otrasPreguntas textarea
 {
      border-radius: 8px;
      width: 60%;
      height: 100px;
-     margin-top: -16px;
+     margin-top: 6px;
 }
 .__form_otrasPreguntas textarea:focus
 {
-     border: 2px solid rgb(247, 42, 27);
+     border: 2px solid rgb(52, 180, 131);
      box-shadow: 0;
 }
 .__form_otrasPreguntas button
 {
      border-radius: 8px;
-     background-color: rgb(247, 42, 27);
+     background-color: rgb(52, 180, 131);
      border: none;
      padding: 6px 14px;
      width: 76px;
      margin-top: 10px;
+     color: #000000;
+
 }
 .__form_otrasPreguntas button:hover
 {
-     background-color: rgba(247, 42, 27, 0.8);
+     background-color: rgba(52, 180, 131, 0.7);
+     color: #000000;
 
 }
 
@@ -82,7 +110,7 @@ a{
      .__pregunta
      {
           font-size: 20px;
-          background-color: rgb(147, 218, 177);
+          background-color: rgb(52, 180, 131);
           padding: 4px 10px;
           border-radius: 10px;
      }
@@ -92,6 +120,7 @@ a{
           transition: all 0.3s;
           padding: 0px 10px 10px 10px;
      }
+     
      .__pregunta:hover
      {
           border-radius: 10px 10px 0px 0px;
