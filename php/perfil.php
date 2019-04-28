@@ -3,7 +3,11 @@
 
      if(!isset($_SESSION['email']))
      {
+<<<<<<< HEAD
           rediret('index.php');
+=======
+          rediret('navbar.php');
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
      }
      else if ($_POST)
      {

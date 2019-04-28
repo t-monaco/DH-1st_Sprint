@@ -1,12 +1,22 @@
+<<<<<<< HEAD
+=======
+<br>
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Preguntas Frecuentes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link href=“https://fonts.googleapis.com/css?family=Raleway:300,400,500,700” rel=“stylesheet”>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+=======
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href=“https://fonts.googleapis.com/css?family=Raleway:300,400,500,700” rel=“stylesheet”>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
     <link rel="stylesheet" href="css/styles-adriano.css">
   </head>
   <body>
@@ -18,6 +28,7 @@
               </legend>
                 <br>
                 <div class="p-r">
+<<<<<<< HEAD
                     <p class="__pregunta">
                          ¿Como puedo contactar con atención al cliente?
                     </p>
@@ -33,11 +44,23 @@
                     <p class="__respuesta">
                          Cada "página de producto" muestra, el precio, y en su caso, promociones aplicables.
                     </p>
+=======
+                <legend>¿Como puedo contactar con atención al cliente?</legend>
+                <p>Para ponerte en contacto con nuestro servicio de atención al cliente puedes llamarnos al 43425961 de Lunes a Viernes de 08:00 a 18:00 hs </p>
                 </div>
 
 
                 <br>
                 <div class="p-r">
+                <legend>¿Donde puedo encontrar información sobre ofertas especiales?</legend>
+                <p>Cada "página de producto" muestra, el precio, y en su caso, promociones aplicables.</p>
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
+                </div>
+
+
+                <br>
+                <div class="p-r">
+<<<<<<< HEAD
                     <p class="__pregunta">
                          ¿Como pago las compras realizadas en la tienda online?
                     </p>
@@ -59,21 +82,42 @@
                     <p class="__respuesta">
                          Si, en la tienda online. Siempre que se cumplan los requisitos establecidos por la entidad financiera para cada importe, los clientes pueden establecer sus pagos a través de cómodas cuotas. Puedes encontrar toda la información relativa a la financiación y el proceso en <a href="https://www.hipervinculo.com">Cuotas</a>
                     </p>
+=======
+                <legend>¿Como pago las compras realizadas en la tienda online?</legend>
+                <p>Durante el proceso de compra podrás hacer uso de los siguientes métodos de pago para poder realizar tu pedido:
+
+                <ol type="1">
+                      <li>Tarjeta VISA, Mastercard o American Express</li>
+                      <li>MercadoPago</li>
+                      </ol>
+                </p>
+                </div>
+                <br>
+                <div class="p-r">
+                <legend>¿Puedo financiar mi compra?</legend>
+                <p>Si, en la tienda online. Siempre que se cumplan los requisitos establecidos por la entidad financiera para cada importe, los clientes pueden establecer sus pagos a través de cómodas cuotas. Puedes encontrar toda la información relativa a la financiación y el proceso en <a href="https://www.hipervinculo.com">Cuotas</a></p>
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
                 </div>
 
                 <br>
                 <div class="p-r">
+<<<<<<< HEAD
                     <p class="__pregunta">
                          ¿Como puedo comprobar el estado de mi pedido?
                     </p>
                     <p class="__respuesta">
                          Puedes comprobar el estado de tu pedido a través de la web o el móvil. Inicia sesión en la tienda online de  dirígete a "Mis pedidos" para comprobar los datos de tu pedido.
                     </p>
+=======
+                <legend>¿Como puedo comprobar el estado de mi pedido?</legend>
+                <p>Puedes comprobar el estado de tu pedido a través de la web o el móvil. Inicia sesión en la tienda online de  dirígete a "Mis pedidos" para comprobar los datos de tu pedido.</p>
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
                 </div>
 
                 <br>
 
                 <div class="p-r">
+<<<<<<< HEAD
                     <p class="__pregunta">
                          ¿Como puedo cancelar o modificar un pedido?
                     </p>
@@ -87,10 +131,22 @@
                               <li>Haz click en "cancelar"</li>
                          </ol>
                     </div>
+=======
+                <legend>¿Como puedo cancelar o modificar un pedido?</legend>
+                <p>Puedes cancelar tu pedido si no se ha iniciado el proceso de preparación en nuestro almacén. Para ello, sólo tienes que seguir los siguientes pasos.
+
+                <ol type="1">
+                      <li>Ir a mis pedidos</li>
+                      <li>Inicia sesión con tu cuenta</li>
+                      <li>Haz click en "cancelar"</li>
+                      </ol>
+                </p>
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
                 </div>
 
               <br>
               <div class="otrasPreguntas">
+<<<<<<< HEAD
                <form class="__form_otrasPreguntas" action="" method="POST">
                     <label>
                          <p>Otras Preguntas</p>
@@ -99,6 +155,17 @@
                     <button class="btn-buttom btn-primary" type="submit">Enviar</button>
                </form>
               </div>
+=======
+              <form action="" method="POST">
+              <label>
+                <legend>Otras Preguntas</legend>
+              </label>
+              <br>
+              <textarea id="textarea" name="observaciones" id="vaciones" cols="50"></textarea>
+              <br>
+              <button class="btn-buttom btn-primary" type="submit">Enviar</button>
+              </form>
+>>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
 
           </article>
         </section>
