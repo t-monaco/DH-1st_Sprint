@@ -1,5 +1,4 @@
 body{
-<<<<<<< HEAD
      font-family: 'Raleway', sans-serif;
 }
 a{
@@ -101,35 +100,5 @@ a{
      {
           display: block;
      }
-=======
-  font-family: 'Raleway', sans-serif;
-}
-a{
-  text-decoration: none;
-  color: #000000;
-}
-.p-r{
-  background-color: rgb(233, 230, 230);
-  border-radius: 10px;
-  padding: 5px;
-}
-.otrasPreguntas textarea{
-  border-radius: 8px;
-  width: 50%;
-  height: 100px;
-}
-.otrasPreguntas textarea:focus{
-  border: 2px solid rgb(247, 42, 27);
-  box-shadow: 0;
-}
-.otrasPreguntas button{
-  border-radius: 8px;
-  background-color: rgb(247, 42, 27);
-  border: none;
-  padding: 6px 14px;
-}
-.otrasPreguntas button:hover{
-  background-color: rgba(247, 42, 27, 0.8);
->>>>>>> 773d27f35ae4585e54faab82407896f8a53c9a6b
 
 }
