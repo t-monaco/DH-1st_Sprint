@@ -22,14 +22,24 @@ a
      overflow: hidden;
      /* position: fixed; */
 }
+.o_links{
+     color:black !important;
+   }
+   .o_links:hover {
+     color: #34B483 !important;
+   }
 .__QUS_container
 {
      /* margin-top: 40px;
      padding-left: 60px;
      padding-right: 60px;
      padding-bottom: 40px;  */
-     /* margin-top: 80px; */
+     margin: 0 auto;
      padding: 40px 60px;
+     max-width:70%;
+}
+.__QUS_container h1 {     
+     text-align: center;
 }
 .p-r
 {

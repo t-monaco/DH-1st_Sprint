@@ -15,6 +15,14 @@ body{
 }
 .o_navlinks{
   text-align: right;
+  color:black;
+}
+
+.o_links{
+  color:black !important;
+}
+.o_links:hover {
+  color: #34B483 !important;
 }
 
 .__imglogo{
@@ -53,9 +61,10 @@ body{
   border: none;
   margin: 0 auto;
   font-weight: bold;
+  border-radius: 20px;
 }
 .__comprar:hover{
-  background-color: #34B483;
+  background-color: black;  
 }
 
 .o_tituloitems{
@@ -84,7 +93,7 @@ body{
   font-weight: bold;
 }
 .__todos:hover{
-  background-color:#34B483;
+  background-color:black;
 }
 .piedepag{
   width: 100vw;

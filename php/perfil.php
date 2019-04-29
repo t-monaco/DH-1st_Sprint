@@ -25,6 +25,7 @@ if (!isset($_SESSION['email'])) {
      <link href=“https://fonts.googleapis.com/css?family=Raleway:300,400,500,700” rel=“stylesheet”>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
      <link rel="stylesheet" href="css/master.css">
      <link rel="stylesheet" href="css/styles-perfil.css">
 </head>
@@ -42,13 +43,13 @@ if (!isset($_SESSION['email'])) {
                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav ml-auto o_navitems">
                                    <li class="nav-item o_navlinks">
-                                        <a class="nav-link" href="perfil.php"><?php echo "<i class='far fa-user'></i> " . $_SESSION["name"]; ?></a>
+                                        <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i> " . $_SESSION["name"]; ?></a>
                                    </li>
                                    <li class="nav-item o_navlinks">
-                                        <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
+                                        <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
                                    </li>
                                    <li class="nav-item o_navlinks">
-                                        <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
+                                        <a class="nav-link o_links" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
                                    </li>
 
                               </ul>
@@ -69,13 +70,13 @@ if (!isset($_SESSION['email'])) {
                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav ml-auto o_navitems">
                                    <li class="nav-item o_navlinks">
-                                        <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+                                        <a class="nav-link o_links" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
                                    </li>
                                    <li class="nav-item o_navlinks">
-                                        <a class="nav-link" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
+                                        <a class="nav-link o_links" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
                                    </li>
                                    <li class="nav-item o_navlinks">
-                                        <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
+                                        <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
                                    </li>
 
                               </ul>

@@ -22,13 +22,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto o_navitems">                
                 <li class="nav-item o_navlinks">
-                  <a class="nav-link" href="perfil.php"><?php echo "<i class='far fa-user'></i> ".$_SESSION["name"];?></a>
+                  <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i> ".$_SESSION["name"];?></a>
                 </li>
                 <li class="nav-item o_navlinks">
-                  <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
+                  <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
                 </li>
                 <li class="nav-item o_navlinks">
-                  <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
+                  <a class="nav-link o_links" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
                 </li>
                       
               </ul>
@@ -49,13 +49,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto o_navitems">                
                 <li class="nav-item o_navlinks">
-                  <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+                  <a class="nav-link o_links" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
                 </li>
                 <li class="nav-item o_navlinks">
-                  <a class="nav-link" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
+                  <a class="nav-link o_links" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
                 </li>
                 <li class="nav-item o_navlinks">
-                  <a class="nav-link" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
+                  <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
                 </li>
                       
               </ul>
@@ -164,11 +164,11 @@
           </article>
           <article class="sucursales col-12 col-md-4 __artpie">
             <h4>Mi cuenta</h4>
-            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+            <a href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
             <br>
-            <a href="register.html"><i class="fas fa-pen"></i> Registracion</a>
+            <a href="register.php"><i class="fas fa-pen"></i> Registracion</a>
             <br>
-            <a href="faq.html"><i class="far fa-question-circle"></i> FAQ</a>
+            <a href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
             <br>
             <a href="#"><i class="fas fa-shopping-cart"></i> Mi Carrito</a>
 
