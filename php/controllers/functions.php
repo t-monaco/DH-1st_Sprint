@@ -134,7 +134,8 @@ function crearSesion($usuario, $datos)
 function validarAvatar($bandera)
 {
      if($bandera == "registro")
-     {
+     {    
+          $errors = array();
           if($_FILES["avatar"]["error"]!=0){
               $errors["avatar"]="Error debe subir imagen";
           }
