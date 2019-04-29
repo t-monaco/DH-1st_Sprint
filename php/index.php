@@ -94,8 +94,13 @@
 
         <a href="#" class="d-flex btn btn-primary __todos" >Ver Catalogo Completo</a>
 
-        <hr>        
+        <hr class="__sep_car-oft">        
         <div class="__ofertas row">
+          <div class="col-12 text-center __productos_destacados">
+               <p>
+                    Productos Destacados
+               </p>
+          </div>
           <div class="d-flex card col-12 col-md-4 col-lg-3 __itemoferta" style="width: 18rem;">
             <img src="img/laptop1.jpg" class="card-img-top __imgofertas" alt="...">
             <div class="card-body o_cardbody">
