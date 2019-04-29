@@ -20,7 +20,6 @@ a
      width: 100%;
      margin-right: 0px;
      overflow: hidden;
-     /* position: fixed; */
 }
 .o_links{
      color:black !important;
@@ -30,13 +29,9 @@ a
    }
 .__QUS_container
 {
-     /* margin-top: 40px;
-     padding-left: 60px;
-     padding-right: 60px;
-     padding-bottom: 40px;  */
      margin: 0 auto;
-     padding: 40px 60px;
-     max-width:70%;
+     padding: 40px 220px;
+     /* max-width:85%; */
 }
 .__QUS_container h1 {     
      text-align: center;
