@@ -1,5 +1,5 @@
 <?php
-session_start();
-session_destroy();
-setcookie ("password","",time()-1);
-header("location:index.php");
+require_once 'loader.php';
+
+Session::destroy();
+rediret('index.php');
