@@ -63,7 +63,7 @@ if (isset($_SESSION['email'])) {
                 <div class="form_content">
                     <form class="form_signup" action="" method="post">
                         <div class="email">
-                            <input class="input_change" type="email" name="email" value="<?= (isset($_COOKIE['email'])) ? $_COOKIE['email'] : '' ?>" required>
+                            <input class="input_change" type="email" name="email" value="<?= (isset($_COOKIE['email'])) ? $_COOKIE['email'] : '' ?>" required autofocus>
                             <label>Email</label>
 
                             <span class="errores">

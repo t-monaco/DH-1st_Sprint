@@ -59,7 +59,7 @@ if (isset($_SESSION['email'])) {
                     <form class="form_signup" action="" method="post">
                         <div class="nombre-apellido">
                             <div class="name">
-                                <input class="input_change" type="text" name="name" required value="<?= (isset($errors["name"])) ? "" : inputUsuario("name"); ?>">
+                                <input class="input_change" type="text" name="name" required value="<?= (isset($errors["name"])) ? "" : inputUsuario("name"); ?>" autofocus>
                                 <label>Nombre</label>
 
                                 <span class="errores">
