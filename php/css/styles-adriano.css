@@ -112,27 +112,29 @@ a
 
 @media (min-width: 992px) 
 {
+    
      .__pregunta
      {
-          font-size: 20px;
-          background-color: rgb(52, 180, 131);
-          padding: 4px 10px;
-          border-radius: 10px;
+        font-size: 20px;
+        background-color: rgb(52, 180, 131);
+        padding: 4px 10px;
+        border-radius: 10px;
      }
      .__respuesta
      {
-          display: none;
-          transition: all 0.3s;
-          padding: 0px 10px 10px 10px;
+        display: none;
+        transition: all 0.3s;
+        padding: 0px 10px 10px 10px;
      }
      
-     .__pregunta:hover
+     .__pregunta:focus
      {
-          border-radius: 10px 10px 0px 0px;
+        border-radius: 10px 10px 0px 0px;
+        outline: none
      }
-     .__pregunta:hover ~ .__respuesta
+     .__pregunta:focus ~ .__respuesta
      {
-          display: block;
+        display: block;
      }
 
 }

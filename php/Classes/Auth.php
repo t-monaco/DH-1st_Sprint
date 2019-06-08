@@ -16,9 +16,9 @@ class Auth
     public function createSession($user)
     {
         Session::start();
-        Session::set('name', $user['name']);
+        Session::set('first_name', $user['first_name']);
         Session::set('email', $user['email']);
-        Session::set('apellido', $user['apellido']);
+        Session::set('last_name', $user['last_name']);
     }
 
     public function remember($password)

@@ -13,9 +13,3 @@ function rediret($param)
     header('Location:' . $param);
 }
 
-function inputUsuario($campo)
-{
-    if (isset($_POST[$campo])) {
-        return $_POST[$campo];
-    }
-}

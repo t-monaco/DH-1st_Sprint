@@ -1,5 +1,4 @@
 <?php
-// include_once("controllers/functions.php");
 require_once 'loader.php';
 
 if (isset($_SESSION['email'])) {
@@ -10,7 +9,7 @@ if (isset($_SESSION['email'])) {
     $errors = $validator->validate($user);
 
     if (count($errors) == 0) {
-        $result = $db->search($user->getEmail());
+        $result = MYSQL::searchUser($user->getEmail(), $pdo);
         if ($result == null) {
             $errors['email'] = 'Email invalido';
         } else if (!$auth->validatePassword($user->getPassword(), $result['password'])) {

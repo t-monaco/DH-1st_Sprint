@@ -4,38 +4,41 @@ class User
 {
     private $email;
     private $password;
-    private $name;
-    private $apellido;
+    private $first_name;
+    private $last_name;
+    private $avatar;
 
     public function __construct(string $email,
                                 string $password,
-                                string $name = null,
-                                string $apellido = null)
+                                string $first_name = null,
+                                string $last_name = null,
+                                $avatar = null)
     {
         $this->email = $email;
         $this->password = $password;
-        $this->name = $name;
-        $this->apellido = $apellido;
+        $this->first_name = $first_name;
+        $this->last_name = $last_name;
+        $this->avatar = $avatar;
     }
 
-    public function getName()
+    public function getFirstName()
     {
-        return $this->name;
+        return $this->first_name;
     }
 
-    public function setName($name): void
+    public function setFirstName($first_name): void
     {
-        $this->name = $name;
+        $this->first_name = $first_name;
     }
 
-    public function getApellido()
+    public function getLastName()
     {
-        return $this->apellido;
+        return $this->last_name;
     }
 
-    public function setApellido($apellido): void
+    public function setLastName($last_name): void
     {
-        $this->apellido = $apellido;
+        $this->last_name = $last_name;
     }
 
     public function getEmail()
@@ -56,6 +59,16 @@ class User
     public function setPassword($password): void
     {
         $this->password = $password;
+    }
+
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+
+    public function setAvatar($avatar): void
+    {
+        $this->avatar = $avatar;
     }
     
 }

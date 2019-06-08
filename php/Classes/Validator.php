@@ -5,14 +5,14 @@ class Validator
     public function validate(User $user, string $cpassword = null)
     {
         $errors = array();
-        if ($user->getName() != null){
-            if ($user->getName() == '') {
-                $errors['name'] = 'Campo obligatorio';
+        if ($user->getFirstName() != null){
+            if ($user->getFirstName() == '') {
+                $errors['first_name'] = 'Campo obligatorio';
             }
         }
-        if ($user->getApellido() != null){
-            if ($user->getApellido() == '') {
-                $errors['apellido'] = 'Campo obligatorio';
+        if ($user->getLastName() != null){
+            if ($user->getLastName() == '') {
+                $errors['last_name'] = 'Campo obligatorio';
             }
         }
         
@@ -43,4 +43,27 @@ class Validator
         return $errors;
 
     }
+
+    public function persist($position)
+    {
+        if (isset($_POST[$position])){
+            return $_POST[$position];
+        }
+    }
+
+    public function validateAvatar()
+    {
+        $errors = array();
+        if ($_FILES["avatar"]["error"] != 0) {
+            $errors["avatar"] = "Error debe subir imagen";
+        }
+        $nombre = $_FILES["avatar"]["name"];
+        $ext = pathinfo($nombre, PATHINFO_EXTENSION);
+        if ($ext != "png" && $ext != "jpg") {
+            $errors["avatar"] = "Debe seleccionar archivo png ó jpg";
+        }
+
+        return $errors;
+    }
+
 }

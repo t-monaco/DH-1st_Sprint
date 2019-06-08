@@ -17,7 +17,6 @@ if (isset($_SESSION['email'])) {
     <meta charset="utf-8">
     <title>Preguntas Frecuentes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href=“https://fonts.googleapis.com/css?family=Raleway:300,400,500,700” rel=“stylesheet”>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -38,7 +37,7 @@ if (isset($_SESSION['email'])) {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto o_navitems">
                             <li class="nav-item o_navlinks">
-                                <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i> " . $_SESSION["name"]; ?></a>
+                                <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i> " . $_SESSION["first_name"]; ?></a>
                             </li>
 
                             <li class="nav-item o_navlinks">
@@ -85,7 +84,7 @@ if (isset($_SESSION['email'])) {
                 </legend>
                 <br>
                 <div class="p-r">
-                    <p class="__pregunta">
+                    <p class="__pregunta" tabindex="0">
                         ¿Como puedo contactar con atención al cliente?
                     </p>
                     <p class="__respuesta">
@@ -94,7 +93,7 @@ if (isset($_SESSION['email'])) {
                 </div>
                 <br>
                 <div class="p-r">
-                    <p class="__pregunta">
+                    <p class="__pregunta" tabindex="0">
                         ¿Donde puedo encontrar información sobre ofertas especiales?
                     </p>
                     <p class="__respuesta">
@@ -105,7 +104,7 @@ if (isset($_SESSION['email'])) {
 
                 <br>
                 <div class="p-r">
-                    <p class="__pregunta">
+                    <p class="__pregunta" tabindex="0">
                         ¿Como pago las compras realizadas en la tienda online?
                     </p>
                     <div class="__respuesta">
@@ -120,7 +119,7 @@ if (isset($_SESSION['email'])) {
                 </div>
                 <br>
                 <div class="p-r">
-                    <p class="__pregunta">
+                    <p class="__pregunta" tabindex="0">
                         ¿Puedo financiar mi compra?
                     </p>
                     <p class="__respuesta">
@@ -130,7 +129,7 @@ if (isset($_SESSION['email'])) {
 
                 <br>
                 <div class="p-r">
-                    <p class="__pregunta">
+                    <p class="__pregunta" tabindex="0" tabindex="0">
                         ¿Como puedo comprobar el estado de mi pedido?
                     </p>
                     <p class="__respuesta">
@@ -141,7 +140,7 @@ if (isset($_SESSION['email'])) {
                 <br>
 
                 <div class="p-r">
-                    <p class="__pregunta">
+                    <p class="__pregunta" tabindex="0">
                         ¿Como puedo cancelar o modificar un pedido?
                     </p>
                     <div class="__respuesta">

@@ -27,7 +27,7 @@ require_once 'loader.php';
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto o_navitems">
                                 <li class="nav-item o_navlinks">
-                                    <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i>   " . $_SESSION["name"]; ?></a>
+                                    <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i>   " . $_SESSION["first_name"]; ?></a>
                                 </li>
                                 <li class="nav-item o_navlinks">
                                     <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>

@@ -1,5 +1,4 @@
 <?php
-// include_once("controllers/functions.php");
 require_once 'loader.php';
 
 $errors = array();
@@ -8,17 +7,17 @@ if (isset($_SESSION['email'])) {
     rediret('index.php');
 } else if ($_POST) {
 
-    $user = new User($_POST['email'], $_POST['password'], $_POST['name'], $_POST['apellido']);
+    $user = new User($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
     // valida el usuario, haciendo uso del metodo validate de la class Validator
     $errors = $validator->validate($user, $_POST['cpassword']);
     // Busca si el mail ya se encuntra registrado
-    if ($db->search($user->getEmail()) != null) {
+    if (MYSQL::searchUser($user->getEmail(), $pdo) != null) {
         $errors['email'] = 'Este email ya se encuentra registrado';
     }
 
     if (count($errors) == 0) {
         $userArray = $factory->create($user);
-        $db->save($userArray);
+        MYSQL::saveUser($userArray, $pdo);
         rediret('login.php');
     }
 }
@@ -59,32 +58,32 @@ if (isset($_SESSION['email'])) {
                     <form class="form_signup" action="" method="post">
                         <div class="nombre-apellido">
                             <div class="name">
-                                <input class="input_change" type="text" name="name" required value="<?= (isset($errors["name"])) ? "" : inputUsuario("name"); ?>" autofocus>
+                                <input class="input_change" type="text" name="first_name" required value="<?= (isset($errors["first_name"])) ? "" : $validator->persist("first_name") ?>" autofocus>
                                 <label>Nombre</label>
 
                                 <span class="errores">
                                     <?php
-                                    if (isset($errors["name"])) : ?>
-                                        <?= "*" . $errors["name"]; ?>
+                                    if (isset($errors["first_name"])) : ?>
+                                        <?= "*" . $errors["first_name"]; ?>
                                     <?php endif; ?>
                                 </span>
 
                             </div>
                             <div class="apellido">
-                                <input class="input_change" type="text" name="apellido" required value="<?= (isset($errors["apellido"])) ? "" : inputUsuario("apellido"); ?>">
+                                <input class="input_change" type="text" name="last_name" required value="<?= (isset($errors["last_name"])) ? "" : $validator->persist("last_name") ?>">
                                 <label>Apellido</label>
 
                                 <span class="errores">
                                     <?php
-                                    if (isset($errors["apellido"])) : ?>
-                                        <?= "*" . $errors["apellido"]; ?>
+                                    if (isset($errors["last_name"])) : ?>
+                                        <?= "*" . $errors["last_name"]; ?>
                                     <?php endif; ?>
                                 </span>
 
                             </div>
                         </div>
                         <div class="email">
-                            <input class="input_change" type="email" name="email" required value="<?= (isset($errors["email"])) ? "" : inputUsuario("email"); ?>">
+                            <input class="input_change" type="email" name="email" required value="<?= (isset($errors["email"])) ? "" : $validator->persist("email") ?>">
                             <label>Email</label>
 
                             <span class="errores">
@@ -163,3 +162,5 @@ if (isset($_SESSION['email'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
+</html>

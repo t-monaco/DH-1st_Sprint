@@ -4,6 +4,10 @@
      padding: 0;
      box-sizing: border-box;
 }
+a
+{
+  text-decoration: none !important;
+}
 .__perfil
 {
      font-family: 'Raleway', sans-serif;
@@ -83,6 +87,12 @@
      font-size: 24px;
 
 }
+.__profile_info a
+{
+    color: rgb(56, 56, 56);
+}
+
+
 
 /* -----------------MEDIA QUERIES----------------- */
 
@@ -131,5 +141,9 @@
      width: 40%;
      align-items: center;
      }
+     .__profile_info a:hover
+    {
+    color: rgb(52, 180, 131);
+    }
 
 }
