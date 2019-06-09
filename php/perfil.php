@@ -36,8 +36,6 @@ if (!isset($_SESSION['email'])) {
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,25 +114,6 @@ if (!isset($_SESSION['email'])) {
         <?php } ?>
     </div>
 </div>
-<!-- <div class="__main_container"> -->
-<!-- <div class="__profile_photo">
-            <img src="img/<?= $user['avatar'] ?>" alt="Avatar">
-            <form class="__profile_form" action="" method="POST" enctype="multipart/form-data">
-                <input class="__invisibleInput" name="nombre" type="text" id="nombre" value=" " placeholder="" />
-                <label class="__select_photo" for="__profile_file">Selecione Foto Perfil</label>
-                <input id="__profile_file" type="file" name="avatar" value="" />
-                <br>
-                <input class="__submit_button" type="submit" name="" value="Subir Foto">
-            </form>
-        </div> -->
-<!-- <div class="__separador"> -->
-
-
-<!-- <?php if (isset($errors["avatar"])) : ?>
-                                                    <?= $errors["avatar"]; ?>
-<?php endif; ?> -->
-
-
 <div class="_main_container">
     <div class="_profile_info">
         <div class="_photo" style="background-image: url('img/<?= $user['avatar'] ?>')">
