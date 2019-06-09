@@ -27,9 +27,9 @@ $db = new DBJSON('users.json');
 $auth = new Auth();
 
 $mi_username = "root";
-$mi_password = "root";
+$mi_password = "";
 $mi_host = "127.0.0.1";
-$mi_base_de_datos = "techhub2";
-$mi_puerto = "8889";
+$mi_base_de_datos = "techhub";
+$mi_puerto = "3306";
 
 $pdo = MYSQL::connect($mi_username, $mi_password, $mi_host, $mi_base_de_datos, $mi_puerto);
