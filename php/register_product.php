@@ -12,7 +12,7 @@ if ($_POST) {
     // dd($productArray);
     MYSQL::saveProduct($productArray, $pdo);
 
-    rediret('index.php');
+    rediret('manage_product.php');
 }
 
 
@@ -36,8 +36,9 @@ if ($_POST) {
         <div class="container_signup">
             <div class="form_header">
                 <div class="signup_title">
-                    Resgistrar Producto
+                    Registrar Producto
                 </div>
+            <br>
             </div>
             <div class="signup_section">
                 <div class="form_content">
@@ -51,7 +52,7 @@ if ($_POST) {
                             <label>Precio</label>
                         </div>
                         <div class="select">
-                            <select name="slct" id="slct">
+                            <select name="category" id="slct">
                                 <option selected disabled>Seleccione una Categoria</option>
                                 <?php foreach ($categories as $category) : ?>
                                     <option value="<?= $category['id'] ?>">

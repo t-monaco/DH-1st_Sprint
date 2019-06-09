@@ -2,7 +2,7 @@
 require_once 'loader.php';
 // dd($_SESSION["admin"]);
 
-$sql = "SELECT products.title, products.description, products.price, products.avatar  FROM products WHERE products.trending = 1 ORDER BY products.title";
+$sql = "SELECT products.title, products.description, products.price, products.avatar  FROM products ORDER BY products.title";
 
 $query = $pdo->query($sql);
 
@@ -19,7 +19,7 @@ $trending = $query->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>techHub</title>
+    <title>techHub - Catalogo </title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@ $trending = $query->fetchAll(PDO::FETCH_ASSOC);
         <header>
             <?php if (isset($_SESSION["email"])) { ?>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#"><img class="__imglogo" src="img/logo_techhub_5.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img class="__imglogo" src="img/logo_techhub_5.png" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -86,42 +86,15 @@ $trending = $query->fetchAll(PDO::FETCH_ASSOC);
                 </nav>
             <?php } ?>
 
-            <br>
-            <div id="carouselExampleFade" class="carousel slide carousel-fade d-none d-lg-flex" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/car01.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/car02.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/car03.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-
-
-            <a href="catalogo.php" class="d-flex btn btn-primary __todos">Ver Catalogo Completo</a>
-
-            <hr class="__sep_car-oft">
+            <br>            
             <div class="__ofertas row">
                 <div class="col-12 text-center __productos_destacados">
                     <p>
-                        Productos Destacados
+                        Catalogo Completo
                     </p>
                 </div>
                 <?php foreach ($trending as $value) {?>
-                    <div class="card col-12 col-md-4 col-lg-3 __itemoferta" style="width: 18rem;">
+                    <div class="card col-6 col-md-3 col-lg-2 __itemoferta" style="width: 18rem;">
                         <img src="img/<?= $value['avatar'] ?>" class="card-img-top __imgofertas" alt="...">
                         <div class="card-body">
                             <p class="card-text o_tituloitems"><?= $value['title']?></p>
