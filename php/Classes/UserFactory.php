@@ -9,6 +9,7 @@ class UserFactory
             'last_name' => $user->getLastName(),
             'email' => $user->getEmail(),
             'password' => HashPassword::hash($user->getPassword()),
+            'avatar' => $user->getAvatar()
         ];
         
         return $userArray;

@@ -6,8 +6,8 @@ $errors = array();
 if (isset($_SESSION['email'])) {
     rediret('index.php');
 } else if ($_POST) {
-
-    $user = new User($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name']);
+    $avatar = 'default.jpeg';
+    $user = new User($_POST['email'], $_POST['password'], $_POST['first_name'], $_POST['last_name'], $avatar);
     // valida el usuario, haciendo uso del metodo validate de la class Validator
     $errors = $validator->validate($user, $_POST['cpassword']);
     // Busca si el mail ya se encuntra registrado

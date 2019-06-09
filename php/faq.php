@@ -36,6 +36,11 @@ if (isset($_SESSION['email'])) {
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto o_navitems">
+                            <?php if ($_SESSION["admin"] == 1) : ?>
+                                <li class="nav-item o_navlinks">
+                                    <a class="nav-link o_links" href="manage_product.php">Administrar Productos</a>
+                                </li>
+                            <?php endif; ?>
                             <li class="nav-item o_navlinks">
                                 <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i> " . $_SESSION["first_name"]; ?></a>
                             </li>

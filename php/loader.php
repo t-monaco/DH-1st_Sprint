@@ -9,6 +9,8 @@ require 'Classes/Database.php';
 require 'Classes/DBJSON.php';
 require 'Classes/HashPassword.php';
 require 'Classes/User.php';
+require 'Classes/Product.php';
+require 'Classes/ProductFactory.php';
 require 'Classes/Auth.php';
 require 'Classes/Session.php';
 require 'Classes/Cookie.php';
@@ -20,6 +22,7 @@ session_start();
 $validator = new Validator();
 $factory = new UserFactory();
 $avatarFactory = new AvatarFactory();
+$productFactory = new ProductFactory();
 $db = new DBJSON('users.json');
 $auth = new Auth();
 
