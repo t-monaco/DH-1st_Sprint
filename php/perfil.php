@@ -24,7 +24,7 @@ if (!isset($_SESSION['email'])) {
     }
     if (isset($_POST['email'])) { }
 
-    if ($_FILES['avatar']['name'] != '' ) {
+    if ($_FILES['avatar']['name'] != '') {
         $errors = array();
         $errors = $validator->validateAvatar();
         if (count($errors) == 0) {
@@ -53,43 +53,43 @@ if (!isset($_SESSION['email'])) {
 <!-- <body class="__perfil"> -->
 <div class="container-fluid">
     <div class="__nav">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="index.php"><img class="__imglogo" src="img/logo_techhub_5.png" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto o_navitems">                            
-                        <?php if (isset($_SESSION["email"])) { ?>
-                            <?php if ($_SESSION["admin"] == 1): ?>
-                                <li class="nav-item o_navlinks">
-                                    <a class="btn btn-dark" href="manage_product.php">Administrar Productos</a>
-                                </li>
-                            <?php endif; ?>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.php"><img class="__imglogo" src="img/logo_techhub_5.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto o_navitems">
+                    <?php if ($_SESSION["admin"] == 1) : ?>
+                        <li class="nav-item o_navlinks">
+                            <a class="nav-link o_links" href="manage_product.php">Administrar Productos</a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION["email"])) { ?>
                         <li class="nav-item o_navlinks">
                             <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i>   " . $_SESSION["first_name"]; ?></a>
                         </li>
                         <li class="nav-item o_navlinks">
                             <a class="nav-link o_links" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
                         </li>
-                        <?php } else { ?>
-                            <li class="nav-item o_navlinks">
+                    <?php } else { ?>
+                        <li class="nav-item o_navlinks">
                             <a class="nav-link o_links" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
                         </li>
                         <li class="nav-item o_navlinks">
                             <a class="nav-link o_links" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
                         </li>
-                        <?php } ?>
-                        <li class="nav-item o_navlinks">
-                            <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0 justify-content-end">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
+                    <?php } ?>
+                    <li class="nav-item o_navlinks">
+                        <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 justify-content-end">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
     </div>
 </div>
 <div class="_main_container">

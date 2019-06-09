@@ -25,32 +25,32 @@ $trending = $query->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <div class="container-fluid">
         <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="index.php"><img class="__imglogo" src="img/logo_techhub_5.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto o_navitems">                            
+                    <ul class="navbar-nav ml-auto o_navitems">
+                        <?php if ($_SESSION["admin"] == 1) : ?>
+                            <li class="nav-item o_navlinks">
+                                <a class="nav-link o_links" href="manage_product.php">Administrar Productos</a>
+                            </li>
+                        <?php endif; ?>
                         <?php if (isset($_SESSION["email"])) { ?>
-                            <?php if ($_SESSION["admin"] == 1): ?>
-                                <li class="nav-item o_navlinks">
-                                    <a class="btn btn-dark" href="manage_product.php">Administrar Productos</a>
-                                </li>
-                            <?php endif; ?>
-                        <li class="nav-item o_navlinks">
-                            <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i>   " . $_SESSION["first_name"]; ?></a>
-                        </li>
-                        <li class="nav-item o_navlinks">
-                            <a class="nav-link o_links" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
-                        </li>
+                            <li class="nav-item o_navlinks">
+                                <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i>   " . $_SESSION["first_name"]; ?></a>
+                            </li>
+                            <li class="nav-item o_navlinks">
+                                <a class="nav-link o_links" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
+                            </li>
                         <?php } else { ?>
                             <li class="nav-item o_navlinks">
-                            <a class="nav-link o_links" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
-                        </li>
-                        <li class="nav-item o_navlinks">
-                            <a class="nav-link o_links" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
-                        </li>
+                                <a class="nav-link o_links" href="login.php"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+                            </li>
+                            <li class="nav-item o_navlinks">
+                                <a class="nav-link o_links" href="register.php"><i class="fas fa-pen"></i> Registrarme</a>
+                            </li>
                         <?php } ?>
                         <li class="nav-item o_navlinks">
                             <a class="nav-link o_links" href="faq.php"><i class="far fa-question-circle"></i> FAQ</a>
@@ -69,12 +69,12 @@ $trending = $query->fetchAll(PDO::FETCH_ASSOC);
                         Catalogo Completo
                     </p>
                 </div>
-                <?php foreach ($trending as $value) {?>
+                <?php foreach ($trending as $value) { ?>
                     <div class="card col-6 col-md-3 col-lg-2 __itemoferta" style="width: 18rem;">
                         <img src="img/<?= $value['avatar'] ?>" class="card-img-top __imgofertas" alt="...">
                         <div class="card-body">
-                            <p class="card-text o_tituloitems"><?= $value['title']?></p>
-                            <a href="#" class="d-flex btn btn-primary __comprar">$<?= $value['price']?></a>
+                            <p class="card-text o_tituloitems"><?= $value['title'] ?></p>
+                            <a href="#" class="d-flex btn btn-primary __comprar">$<?= $value['price'] ?></a>
                         </div>
                     </div>
                 <?php } ?>

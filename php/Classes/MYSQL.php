@@ -89,6 +89,20 @@ class MYSQL
         $listado = $consulta->fetchall(PDO::FETCH_ASSOC);
         return $listado;
     }
+
+    static public function searchProduct($productId ,$pdo)
+    {
+        $query = "SELECT * FROM products WHERE id = ?";
+        $statement = $pdo->prepare($query);
+        $statement->bindValue(1, $productId);
+        $statement->execute();
+
+        $product = $statement->fetch(PDO::FETCH_ASSOC);
+
+        return $product;
+
+    }
+
     static public function updateFirstName($data, $userID,$pdo)
     {
         $sql = "update clients set first_name=:first_name where clients.id=:id";

@@ -42,7 +42,7 @@ $product_list = MYSQL::productList('products', $pdo);
 
                             <th scope="row"><?= $value["id"] ?></th>
                             <td><?= $value["title"]; ?></td>
-                            <td><a href="mostrarUsuarioAdmin.php?id=<?= $value['id']; ?>">
+                            <td><a href="showProduct.php?id=<?= $value['id']; ?>">
                                     <i class="far fa-eye"></i>
                                 </a>
                             </td>
