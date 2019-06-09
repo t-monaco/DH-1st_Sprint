@@ -33,12 +33,14 @@ if ($_POST) {
 
 <body>
     <main>
+        <a href="manage_product.php">Volver</a>
+
         <div class="container_signup">
             <div class="form_header">
                 <div class="signup_title">
                     Registrar Producto
                 </div>
-            <br>
+                <br>
             </div>
             <div class="signup_section">
                 <div class="form_content">
@@ -74,11 +76,6 @@ if ($_POST) {
                 </div>
             </div>
         </div>
-        <!-- <div class="already_user">
-                <a href="manage_product.php">Volver</a>
-            </div> -->
-        <a href="manage_product.php">Volver</a>
-
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,33 +1,37 @@
 <?php
 require_once 'loader.php';
 $user = MYSQL::searchUser($_SESSION['email'], $pdo);
-// dd($user);
-
-// dd($_FILES);
 if (!isset($_SESSION['email'])) {
     rediret('index.php');
 } else if ($_POST) {
-    // dd($_POST);
+    $errors = array();
+
     if (isset($_POST['first_name'])) {
-        MYSQL::updateFirstName($_POST['first_name'], $user['id'], $pdo);
-        rediret('perfil.php');
+        $newUser = new User(null, null, $_POST['first_name']);
+        $errors = $validator->validate($newUser);
+        if (count($errors) == 0) {
+            MYSQL::updateFirstName($newUser->getFirstName(), $user['id'], $pdo);
+            rediret('perfil.php');
+        }
     }
     if (isset($_POST['last_name'])) {
-        MYSQL::updateLastName($_POST['last_name'], $user['id'], $pdo);
-        rediret('perfil.php');
+        $newUser = new User(null, null, null, $_POST['last_name']);
+        $errors = $validator->validate($newUser);
+        if (count($errors) == 0) {
+            MYSQL::updateLastName($newUser->getLastName(), $user['id'], $pdo);
+            rediret('perfil.php');
+        }
     }
     if (isset($_POST['email'])) { }
 
-    // if (count($_FILES != 0)){
-    //     dd('pollo');
-    // }
-    $errors = array();
-    $errors = $validator->validateAvatar();
-    if (count($errors) == 0) {
-        $avatar = $avatarFactory->create($_FILES);
-        // dd($avatar);
-        $user = MYSQL::searchUser($_SESSION['email'], $pdo);
-        MYSQL::updateAvatar($user, $avatar, $pdo);
+    if ($_FILES['avatar']['name'] != '' ) {
+        $errors = array();
+        $errors = $validator->validateAvatar();
+        if (count($errors) == 0) {
+            $avatar = $avatarFactory->create($_FILES);
+            $user = MYSQL::searchUser($_SESSION['email'], $pdo);
+            MYSQL::updateAvatar($user, $avatar, $pdo);
+        }
     }
 }
 
@@ -126,10 +130,9 @@ if (!isset($_SESSION['email'])) {
 <!-- <div class="__separador"> -->
 
 
-<!-- <?php
-        if (isset($errors["avatar"])) : ?>
-                            <?= $errors["avatar"]; ?>
-    <?php endif; ?> -->
+<!-- <?php if (isset($errors["avatar"])) : ?>
+                                                    <?= $errors["avatar"]; ?>
+<?php endif; ?> -->
 
 
 <div class="_main_container">
@@ -153,6 +156,12 @@ if (!isset($_SESSION['email'])) {
                         <div class="popupContent">
                             <form class="__profile_form" action="" method="POST">
                                 <input class="input_change" type="text" name="first_name" required value="">
+                                <div class="_errors">
+                                    <?php if (isset($errors["first_name"])) : ?>
+                                        <?= $errors["first_name"]; ?>
+                                        <br>
+                                    <?php endif; ?>
+                                </div>
                                 <br>
                                 <input class="submit_button" type="submit" name="" value="Cambiar">
                             </form>
@@ -170,6 +179,12 @@ if (!isset($_SESSION['email'])) {
                         <div class="popupContent">
                             <form class="__profile_form" action="" method="POST">
                                 <input class="input_change" type="text" name="last_name" required value="">
+                                <div class="_errors">
+                                    <?php if (isset($errors["last_name"])) : ?>
+                                        <?= $errors["last_name"]; ?>
+                                        <br>
+                                    <?php endif; ?>
+                                </div>
                                 <br>
                                 <input class="submit_button" type="submit" name="" value="Cambiar">
                             </form>
@@ -202,8 +217,15 @@ if (!isset($_SESSION['email'])) {
                         <a id="cerrar" href="">&times;</a>
                         <div class="popupContent">
                             <form class="__profile_form" action="" method="POST" enctype="multipart/form-data">
-                                <input name="nombre" type="hidden" id="nombre" value=" " placeholder="">
-                                <input id="__profile_file" type="file" name="avatar" value="" />
+                                <input name="hidden" type="hidden" id="hidden" value="" placeholder="">
+                                <input id="_inputProfile" type="file" name="avatar" value="" />
+                                <div class="_errors">
+                                    <?php if (isset($errors["avatar"])) : ?>
+                                        <?= $errors["avatar"]; ?>
+                                        <br>
+                                    <?php endif; ?>
+                                </div>
+                                <br>
                                 <br>
                                 <input class="submit_button" type="submit" name="" value="Cambiar">
                             </form>

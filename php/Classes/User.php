@@ -8,16 +8,16 @@ class User
     private $last_name;
     private $avatar;
 
-    public function __construct(string $email,
-                                string $password,
+    public function __construct(string $email = null,
+                                string $password = null,
                                 string $first_name = null,
                                 string $last_name = null,
                                 $avatar = null)
     {
         $this->email = $email;
         $this->password = $password;
-        $this->first_name = $first_name;
-        $this->last_name = $last_name;
+        $this->first_name = ucwords(strtolower($first_name));
+        $this->last_name = ucwords(strtolower($last_name));
         $this->avatar = $avatar;
     }
 

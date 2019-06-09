@@ -190,6 +190,19 @@ a
     bottom: 0;
     z-index: -1;
 }
+._errors{
+     color: rgb(247, 42, 27);
+     position: absolute;
+     z-index: 998;
+     bottom: 30px;
+     left: 130px;
+     font-size: 12.5px;
+}
+
+/* ._inputProfile
+{
+    position: relative;
+} */
 
 
 

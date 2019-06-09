@@ -178,7 +178,7 @@ a{
           user-select: none;
 }
 .file-custom:after {
-  content: "Choose file...";
+  content: "";
 }
 .file-custom:before {
   position: absolute;
