@@ -24,7 +24,7 @@ if (!isset($_SESSION['email'])) {
     }
     if (isset($_POST['email'])) { }
 
-    if ($_FILES['avatar']['name'] != '') {
+    if (isset($_FILES['avatar']['name']) && $_FILES['avatar']['name'] != '') {
         $errors = array();
         $errors = $validator->validateAvatar();
         if (count($errors) == 0) {
@@ -60,14 +60,14 @@ if (!isset($_SESSION['email'])) {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto o_navitems">
-                    <?php if ($_SESSION["admin"] == 1) : ?>
+                    <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] == 1) : ?>
                         <li class="nav-item o_navlinks">
                             <a class="nav-link o_links" href="manage_product.php">Administrar Productos</a>
                         </li>
                     <?php endif; ?>
                     <?php if (isset($_SESSION["email"])) { ?>
                         <li class="nav-item o_navlinks">
-                            <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i>   " . $_SESSION["first_name"]; ?></a>
+                            <a class="nav-link o_links" href="perfil.php"><?php echo "<i class='far fa-user'></i>   " . $user["first_name"]; ?></a>
                         </li>
                         <li class="nav-item o_navlinks">
                             <a class="nav-link o_links" href="logout.php"><i class="fas fa-sign-out-alt"></i> Salir</a>

@@ -1,9 +1,10 @@
 <?php
 require_once 'loader.php';
-
+if (!isset($_SESSION["admin"]) && $_SESSION["admin"] != 1) {
+    rediret('index.php');
+}
 $product_list = MYSQL::productList('products', $pdo);
 
-// dd($product_list);
 ?>
 
 <!DOCTYPE html>

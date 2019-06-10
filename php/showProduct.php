@@ -1,7 +1,9 @@
 <?php
 require_once 'loader.php';
+if (!isset($_SESSION["admin"]) && $_SESSION["admin"] != 1) {
+    rediret('index.php');
+}
 $product = MYSQL::searchProduct($_GET['id'], $pdo);
-// dd($product);
 ?>
 
 <!DOCTYPE html>

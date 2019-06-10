@@ -34,7 +34,7 @@ if (isset($_SESSION['email'])) {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto o_navitems">
-                        <?php if ($_SESSION["admin"] == 1) : ?>
+                        <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] == 1) : ?>
                             <li class="nav-item o_navlinks">
                                 <a class="nav-link o_links" href="manage_product.php">Administrar Productos</a>
                             </li>

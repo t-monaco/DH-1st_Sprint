@@ -1,20 +1,20 @@
 <?php
 require_once 'loader.php';
-$product = MYSQL::searchProduct($_GET['id'], $pdo);
+if (isset($_GET['id'])) {
+    $productId = $_GET['id'];
+}
+$product = MYSQL::searchProduct($productId, $pdo);
 $categories = MYSQL::categoriesList($pdo);
 
-// dd($product);
-
-if ($_POST) {
+if (!isset($_SESSION["admin"]) && $_SESSION["admin"] != 1) {
+    rediret('index.php');
+} elseif ($_POST) {
     $updateProduct = new Product($_POST['title'], $_POST['price'], $_POST['category'], $_POST['description']);
     $updateProductAvatar = $avatarFactory->create($_FILES);
     $updateProductArray = $productFactory->create($updateProduct, $updateProductAvatar);
-    // dd($updateProductArray);
 
     foreach ($updateProductArray as $key => $value) {
-        // dd($_POST);
         $sql = "update products set $key='$value' where id=:id";
-        // dd($product);
         $query = $pdo->prepare($sql);
         $query->bindValue(':id', $product['id']);
         $query->execute();

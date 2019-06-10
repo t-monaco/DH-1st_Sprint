@@ -2,10 +2,10 @@
 require_once 'loader.php';
 $categories = MYSQL::categoriesList($pdo);
 // dd($categories);
-
+if (!isset($_SESSION["admin"]) && $_SESSION["admin"] != 1) {
+    rediret('index.php');
+}
 if ($_POST) {
-
-    // dd($_POST);
     $product = new Product($_POST['title'], $_POST['price'], $_POST['category'], $_POST['description']);
     $productAvatar = $avatarFactory->create($_FILES);
     $productArray = $productFactory->create($product, $productAvatar);
